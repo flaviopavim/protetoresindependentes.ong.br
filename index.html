@@ -4,18 +4,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.classList.add('js');</script>
 
   <!-- ============================================================
        SEO
   ============================================================ -->
   <title>Protetores Independentes | ONG de proteção animal em Dracena/SP</title>
-  <meta name="description" content="ONG de Dracena/SP que resgata e cuida de cães e gatos abandonados. Adote um animal, faça uma doação por PIX e ajude a dar um lar a quem não tem voz.">
+  <meta name="description" content="ONG de Dracena/SP que resgata e cuida de cães e gatos abandonados. Adote, seja voluntário, castre seu animalzinho ou doe por PIX. Fale com a gente no WhatsApp.">
   <meta name="author" content="Protetores Independentes">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <meta name="geo.region" content="BR-SP">
   <meta name="geo.placename" content="Dracena">
 
-  <!-- URL principal -->
   <link rel="canonical" href="https://protetoresindependentes.ong.br/">
   <link rel="alternate" hreflang="pt-BR" href="https://protetoresindependentes.ong.br/">
   <link rel="alternate" hreflang="x-default" href="https://protetoresindependentes.ong.br/">
@@ -27,7 +27,7 @@
   <meta property="og:site_name" content="Protetores Independentes">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:title" content="Protetores Independentes | Ajude cães e gatos de Dracena/SP">
-  <meta property="og:description" content="Adote, doe ou compartilhe: ajude cães e gatos abandonados de Dracena/SP a encontrar um lar.">
+  <meta property="og:description" content="Adote, seja voluntário, castre seu animalzinho ou doe: ajude cães e gatos abandonados de Dracena/SP.">
   <meta property="og:url" content="https://protetoresindependentes.ong.br/">
   <meta property="og:image" content="https://protetoresindependentes.ong.br/share.png">
   <meta property="og:image:secure_url" content="https://protetoresindependentes.ong.br/share.png">
@@ -41,7 +41,7 @@
   ============================================================ -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Protetores Independentes | Ajude cães e gatos de Dracena/SP">
-  <meta name="twitter:description" content="Adote, doe ou compartilhe: ajude cães e gatos abandonados de Dracena/SP a encontrar um lar.">
+  <meta name="twitter:description" content="Adote, seja voluntário, castre seu animalzinho ou doe: ajude cães e gatos abandonados de Dracena/SP.">
   <meta name="twitter:image" content="https://protetoresindependentes.ong.br/share.png">
   <meta name="twitter:image:alt" content="Logotipo da Protetores Independentes: um cão e um gato protegidos por duas mãos e um coração verde">
 
@@ -65,7 +65,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap"
     rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
@@ -81,18 +81,27 @@
         "@type": ["NGO", "LocalBusiness"],
         "@id": "https://protetoresindependentes.ong.br/#ong",
         "name": "Protetores Independentes",
-        "alternateName": "Protetores Independentes de Dracena",
+        "alternateName": ["Protetores Independentes de Dracena", "ONG Arca de Noé Dracena"],
         "description": "ONG de proteção animal de Dracena/SP que resgata, cuida e encaminha cães e gatos abandonados para adoção responsável.",
         "url": "https://protetoresindependentes.ong.br/",
         "logo": "https://protetoresindependentes.ong.br/icon-512.png",
         "image": "https://protetoresindependentes.ong.br/share.png",
         "taxID": "09.499.741/0001-33",
+        "telephone": "+55-18-99722-7394",
+        "email": "ajude.protetorasindependentes@gmail.com",
         "areaServed": "Dracena, SP, Brasil",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Dracena",
           "addressRegion": "SP",
           "addressCountry": "BR"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "telephone": "+55-18-99722-7394",
+          "email": "ajude.protetorasindependentes@gmail.com",
+          "availableLanguage": "Portuguese"
         },
         "sameAs": [
           "https://www.instagram.com/_protetores_independentes/",
@@ -116,6 +125,8 @@
 
 <body>
 
+  <a class="skip" href="#topo">Ir para o conteúdo</a>
+
   <!-- ============================================================
        CABEÇALHO
   ============================================================ -->
@@ -127,11 +138,23 @@
           <span>Protetores Independentes</span>
         </a>
 
-        <ul>
+        <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul id="menu">
           <li><a href="#sobre">Quem somos</a></li>
           <li><a href="#adote">Adote</a></li>
+          <li><a href="#participe">Participe</a></li>
           <li><a href="#doe">Doe</a></li>
-          <li><a class="cta" href="#doe">Ajude</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li>
+            <a class="cta" href="https://wa.me/5518997227394?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Protetores%20Independentes."
+              target="_blank" rel="noopener">
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              WhatsApp
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -158,7 +181,8 @@
 
           <div class="btns">
             <a class="btn primary" href="#adote">Quero adotar</a>
-            <a class="btn" href="#doe">Quero ajudar</a>
+            <a class="btn" href="#participe" data-tab="voluntario">Quero ser voluntário</a>
+            <a class="btn" href="#participe" data-tab="castracao">Quero castrar meu animalzinho</a>
           </div>
         </div>
 
@@ -187,7 +211,7 @@
     <section id="sobre">
       <div class="wrap about">
 
-        <div>
+        <div class="reveal">
           <h2>Quem somos</h2>
 
           <p class="lead">
@@ -206,21 +230,21 @@
 
         <div class="pillars">
 
-          <div class="pillar">
+          <div class="pillar reveal">
             <h3>Resgate</h3>
             <p>
               Acolhemos animais abandonados, feridos ou em situação de risco.
             </p>
           </div>
 
-          <div class="pillar">
+          <div class="pillar reveal">
             <h3>Cuidado</h3>
             <p>
               Alimentação, saúde e carinho enquanto eles se recuperam no abrigo.
             </p>
           </div>
 
-          <div class="pillar">
+          <div class="pillar reveal">
             <h3>Adoção responsável</h3>
             <p>
               Buscamos famílias que queiram assumir o compromisso por toda
@@ -238,30 +262,30 @@
     <section id="adote" class="adopt">
       <div class="wrap">
 
-        <h2>Adote um amigo</h2>
+        <h2 class="reveal">Adote um amigo</h2>
 
-        <p class="lead">
+        <p class="lead reveal">
           Adotar muda duas vidas: a do animal e a sua. Veja os cães e gatos
           que esperam por um lar e fale direto com a gente.
         </p>
 
         <ol class="steps">
 
-          <li>
+          <li class="reveal">
             <h3>Conheça</h3>
             <p>
-              Veja os animais disponíveis no nosso Instagram.
+              Veja os animais disponíveis no catálogo de adoção e no nosso Instagram.
             </p>
           </li>
 
-          <li>
+          <li class="reveal">
             <h3>Converse</h3>
             <p>
-              Chame a equipe e conte um pouco sobre você e sua casa.
+              Chame a equipe no WhatsApp e conte um pouco sobre você e sua casa.
             </p>
           </li>
 
-          <li>
+          <li class="reveal">
             <h3>Leve para casa</h3>
             <p>
               Combinamos a adoção e você ganha um novo amigo.
@@ -273,10 +297,18 @@
         <div class="btns">
           <a
             class="btn primary"
+            href="https://chyco.com.br/catalogo.php?animal=2&amp;pessoa=5&amp;city=Dracena"
+            target="_blank"
+            rel="noopener">
+            Ver animais para adoção
+          </a>
+
+          <a
+            class="btn"
             href="https://www.instagram.com/_protetores_independentes/"
             target="_blank"
             rel="noopener">
-            Ver animais no Instagram
+            Ver no Instagram
           </a>
 
           <a
@@ -292,14 +324,134 @@
     </section>
 
     <!-- ==========================================================
+         PARTICIPE (ABAS: VOLUNTÁRIO / CASTRAÇÃO) -> WHATSAPP
+    =========================================================== -->
+    <section id="participe" class="join">
+      <div class="wrap">
+
+        <h2 class="reveal">Participe</h2>
+
+        <p class="lead reveal">
+          Escolha uma opção, preencha rápido e a conversa abre direto
+          no WhatsApp da ONG.
+        </p>
+
+        <div class="tabs reveal">
+
+          <div class="tablist" role="tablist" aria-label="Como você quer participar">
+            <button class="tab" id="tab-voluntario" role="tab" type="button"
+              aria-selected="true" aria-controls="panel-voluntario">
+              Quero ser voluntário
+            </button>
+            <button class="tab" id="tab-castracao" role="tab" type="button"
+              aria-selected="false" aria-controls="panel-castracao" tabindex="-1">
+              Quero castrar meu animalzinho
+            </button>
+          </div>
+
+          <!-- VOLUNTÁRIO -->
+          <div class="panel" id="panel-voluntario" role="tabpanel" aria-labelledby="tab-voluntario">
+            <div class="panel-text">
+              <h3>Seja voluntário</h3>
+              <p>
+                A causa animal precisa de ação, tempo e boa vontade.
+                Conte como você pode ajudar e a equipe responde pelo WhatsApp.
+              </p>
+            </div>
+
+            <form class="wa-form" data-kind="voluntario" novalidate>
+              <label>
+                Seu nome
+                <input type="text" name="nome" autocomplete="name" required>
+              </label>
+
+              <label>
+                Como você gostaria de ajudar?
+                <input type="text" name="ajuda" placeholder="Ex.: ajudar no abrigo, transporte, divulgação...">
+              </label>
+
+              <label>
+                Dias e horários disponíveis <span class="opt">(opcional)</span>
+                <input type="text" name="horarios">
+              </label>
+
+              <button class="btn wa" type="submit">
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                Enviar pelo WhatsApp
+              </button>
+            </form>
+          </div>
+
+          <!-- CASTRAÇÃO -->
+          <div class="panel" id="panel-castracao" role="tabpanel" aria-labelledby="tab-castracao" hidden>
+            <div class="panel-text">
+              <h3>Castre seu animalzinho</h3>
+              <p>
+                Castrar evita ninhadas indesejadas e ajuda a reduzir o abandono.
+                Conte sobre o seu bichinho e a equipe te orienta pelo WhatsApp.
+              </p>
+            </div>
+
+            <form class="wa-form" data-kind="castracao" novalidate>
+              <label>
+                Seu nome
+                <input type="text" name="nome" autocomplete="name" required>
+              </label>
+
+              <div class="row">
+                <label>
+                  Animal
+                  <select name="especie">
+                    <option>Cachorro</option>
+                    <option>Gato</option>
+                  </select>
+                </label>
+
+                <label>
+                  Sexo
+                  <select name="sexo">
+                    <option>Fêmea</option>
+                    <option>Macho</option>
+                  </select>
+                </label>
+              </div>
+
+              <label>
+                Bairro <span class="opt">(opcional)</span>
+                <input type="text" name="bairro" autocomplete="address-level3">
+              </label>
+
+              <label>
+                Algo mais que devemos saber? <span class="opt">(opcional)</span>
+                <input type="text" name="obs" placeholder="Idade, porte, se está no cio...">
+              </label>
+
+              <button class="btn wa" type="submit">
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                Enviar pelo WhatsApp
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+        <p class="note-dark reveal">
+          Prefere chamar direto?
+          <a href="https://wa.me/5518997227394" target="_blank" rel="noopener">(18) 99722-7394</a>
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================
          DOAÇÕES
     =========================================================== -->
     <section id="doe" class="donate">
       <div class="wrap">
 
-        <h2>Ajude o abrigo</h2>
+        <h2 class="reveal">Ajude o abrigo</h2>
 
-        <p class="lead">
+        <p class="lead reveal">
           Somos independentes e vivemos de doações. Qualquer valor ajuda
           a pagar ração, remédios e castrações.
         </p>
@@ -307,12 +459,10 @@
         <div class="pay">
 
           <!-- PIX -->
-          <div>
+          <div class="reveal">
             <h3>PIX</h3>
 
-            <code id="pix">
-              ajude.protetorasindependentes@gmail.com
-            </code>
+            <code id="pix">ajude.protetorasindependentes@gmail.com</code>
 
             <p class="qrl">
               Ou escaneie o QR Code no app do seu banco:
@@ -327,31 +477,29 @@
               width="176"
               height="176">
 
-            <button class="copy" data-target="pix">
+            <button class="copy" type="button" data-target="pix">
               Copiar chave
             </button>
           </div>
 
           <!-- WISE -->
-          <div>
+          <div class="reveal">
             <h3>Wise</h3>
 
             <code id="wise">@giuliap875</code>
 
-            <button class="copy" data-target="wise">
+            <button class="copy" type="button" data-target="wise">
               Copiar usuário
             </button>
           </div>
 
           <!-- CNPJ -->
-          <div>
+          <div class="reveal">
             <h3>CNPJ</h3>
 
-            <code id="cnpj">
-              09.499.741/0001-33
-            </code>
+            <code id="cnpj">09.499.741/0001-33</code>
 
-            <button class="copy" data-target="cnpj">
+            <button class="copy" type="button" data-target="cnpj">
               Copiar CNPJ
             </button>
           </div>
@@ -371,36 +519,52 @@
     <section id="contato" class="contact">
       <div class="wrap">
 
-        <h2>Fale com a gente</h2>
+        <h2 class="reveal">Fale com a gente</h2>
 
-        <p class="lead">
+        <p class="lead reveal">
           Mais de 3 mil seguidores e mais de 1.200 publicações acompanham
           o trabalho da ONG em Dracena/SP. Venha conhecer, compartilhar e
           fazer parte.
         </p>
 
+        <div class="contact-cards">
+
+          <a class="ccard wa-card reveal"
+            href="https://wa.me/5518997227394?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Protetores%20Independentes."
+            target="_blank" rel="noopener">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            <strong>WhatsApp</strong>
+            <span>(18) 99722-7394</span>
+          </a>
+
+          <a class="ccard reveal" href="mailto:ajude.protetorasindependentes@gmail.com">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            <strong>E-mail</strong>
+            <span>ajude.protetorasindependentes@gmail.com</span>
+          </a>
+
+          <a class="ccard reveal" href="https://www.instagram.com/_protetores_independentes/" target="_blank" rel="noopener">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6"/></svg>
+            <strong>Instagram</strong>
+            <span>@_protetores_independentes</span>
+          </a>
+
+          <a class="ccard reveal" href="https://www.instagram.com/cat_dracena/" target="_blank" rel="noopener">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6"/></svg>
+            <strong>Instagram do abrigo</strong>
+            <span>@cat_dracena</span>
+          </a>
+
+        </div>
+
+        <p class="orgs reveal">
+          ONG Arca de Noé Dracena &middot; ONG Protetores Independentes
+        </p>
+
         <div class="btns">
-
-          <a
-            class="btn primary"
-            href="https://www.instagram.com/_protetores_independentes/"
-            target="_blank"
-            rel="noopener">
-            @_protetores_independentes
-          </a>
-
-          <a
-            class="btn"
-            href="https://www.instagram.com/cat_dracena/"
-            target="_blank"
-            rel="noopener">
-            @cat_dracena (abrigo)
-          </a>
-
           <button class="btn" id="share" type="button">
             Compartilhar o site
           </button>
-
         </div>
       </div>
     </section>
@@ -411,7 +575,7 @@
     <section class="support" aria-labelledby="ap">
       <div class="wrap">
 
-        <div class="box">
+        <div class="box reveal">
 
           <div>
             <h2 id="ap">Quem apoia este site</h2>
@@ -456,7 +620,11 @@
         · CNPJ 09.499.741/0001-33
       </p>
 
-      <p>Dracena/SP</p>
+      <p>
+        Dracena/SP ·
+        <a href="https://wa.me/5518997227394" target="_blank" rel="noopener">(18) 99722-7394</a> ·
+        <a href="mailto:ajude.protetorasindependentes@gmail.com">ajude.protetorasindependentes@gmail.com</a>
+      </p>
 
       <p>
         Site feito com 💚 por
@@ -472,33 +640,234 @@
   </footer>
 
   <!-- ============================================================
+       WHATSAPP FLUTUANTE
+  ============================================================ -->
+  <a class="wa-float"
+    href="https://wa.me/5518997227394?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Protetores%20Independentes."
+    target="_blank" rel="noopener" aria-label="Falar com a ONG no WhatsApp">
+    <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+    <span>WhatsApp</span>
+  </a>
+
+  <!-- ============================================================
        JAVASCRIPT
   ============================================================ -->
   <script>
-    // Copia valores dos elementos configurados com data-target.
+    // ============================================================
+    // CONFIG
+    // ============================================================
+
+    const WHATSAPP = '5518997227394';
+
+
+    // ============================================================
+    // MENU MOBILE
+    // ============================================================
+
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+
+    function setMenu(open) {
+      menu.classList.toggle('open', open);
+      menuBtn.setAttribute('aria-expanded', String(open));
+      menuBtn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    }
+
+    menuBtn.addEventListener('click', () => {
+      setMenu(!menu.classList.contains('open'));
+    });
+
+    menu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => setMenu(false));
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        setMenu(false);
+      }
+    });
+
+
+    // ============================================================
+    // ABAS (VOLUNTÁRIO / CASTRAÇÃO)
+    // ============================================================
+
+    const tabs = Array.from(document.querySelectorAll('.tab'));
+
+    function selectTab(tab, focus = false) {
+      tabs.forEach((item) => {
+        const active = item === tab;
+
+        item.setAttribute('aria-selected', String(active));
+        item.tabIndex = active ? 0 : -1;
+
+        document
+          .getElementById(item.getAttribute('aria-controls'))
+          .hidden = !active;
+      });
+
+      if (focus) {
+        tab.focus();
+      }
+    }
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => selectTab(tab));
+
+      tab.addEventListener('keydown', (event) => {
+        let next = null;
+
+        if (event.key === 'ArrowRight') next = tabs[(index + 1) % tabs.length];
+        if (event.key === 'ArrowLeft') next = tabs[(index - 1 + tabs.length) % tabs.length];
+        if (event.key === 'Home') next = tabs[0];
+        if (event.key === 'End') next = tabs[tabs.length - 1];
+
+        if (next) {
+          event.preventDefault();
+          selectTab(next, true);
+        }
+      });
+    });
+
+    // Botões do topo que já abrem a aba certa
+    document.querySelectorAll('[data-tab]').forEach((link) => {
+      link.addEventListener('click', () => {
+        const tab = document.getElementById('tab-' + link.dataset.tab);
+
+        if (tab) {
+          selectTab(tab);
+        }
+      });
+    });
+
+    // Links com #voluntario ou #castracao
+    function openTabFromHash() {
+      const hash = window.location.hash.replace('#', '');
+
+      if (hash === 'voluntario' || hash === 'castracao') {
+        selectTab(document.getElementById('tab-' + hash));
+        document.getElementById('participe').scrollIntoView();
+      }
+    }
+
+    openTabFromHash();
+    window.addEventListener('hashchange', openTabFromHash);
+
+
+    // ============================================================
+    // FORMULÁRIOS -> WHATSAPP
+    // ============================================================
+
+    function field(form, name) {
+      const input = form.elements[name];
+
+      return input ? input.value.trim() : '';
+    }
+
+    function buildMessage(form) {
+      const lines = [];
+
+      if (form.dataset.kind === 'voluntario') {
+        lines.push('Olá! Vim pelo site da Protetores Independentes e quero ser voluntário(a).', '');
+        lines.push('Nome: ' + field(form, 'nome'));
+
+        if (field(form, 'ajuda')) lines.push('Como posso ajudar: ' + field(form, 'ajuda'));
+        if (field(form, 'horarios')) lines.push('Disponibilidade: ' + field(form, 'horarios'));
+      } else {
+        lines.push('Olá! Vim pelo site da Protetores Independentes e quero castrar meu animalzinho.', '');
+        lines.push('Nome: ' + field(form, 'nome'));
+        lines.push('Animal: ' + field(form, 'especie'));
+        lines.push('Sexo: ' + field(form, 'sexo'));
+
+        if (field(form, 'bairro')) lines.push('Bairro: ' + field(form, 'bairro'));
+        if (field(form, 'obs')) lines.push('Observações: ' + field(form, 'obs'));
+      }
+
+      return lines.join('\n');
+    }
+
+    document.querySelectorAll('.wa-form').forEach((form) => {
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const nameInput = form.elements.nome;
+
+        if (!nameInput.value.trim()) {
+          nameInput.setCustomValidity('Informe seu nome');
+          nameInput.reportValidity();
+          nameInput.addEventListener('input', () => nameInput.setCustomValidity(''), { once: true });
+          return;
+        }
+
+        const url = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(buildMessage(form))}`;
+        const opened = window.open(url, '_blank', 'noopener');
+
+        if (!opened) {
+          window.location.href = url;
+        }
+      });
+    });
+
+
+    // ============================================================
+    // COPIAR CONTEÚDO
+    // ============================================================
+
+    async function copyToClipboard(text) {
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(text);
+          return true;
+        }
+      } catch (error) {
+        // Continua para o fallback.
+      }
+
+      try {
+        const textarea = document.createElement('textarea');
+
+        textarea.value = text;
+        textarea.setAttribute('readonly', '');
+        textarea.style.position = 'fixed';
+        textarea.style.left = '-9999px';
+        textarea.style.top = '0';
+
+        document.body.appendChild(textarea);
+
+        textarea.focus();
+        textarea.select();
+        textarea.setSelectionRange(0, textarea.value.length);
+
+        const copied = document.execCommand('copy');
+
+        textarea.remove();
+
+        return copied;
+      } catch (error) {
+        return false;
+      }
+    }
+
+
+    // ============================================================
+    // BOTÕES DE COPIAR
+    // ============================================================
+
     document.querySelectorAll('.copy').forEach((button) => {
       button.addEventListener('click', async () => {
         const target = document.getElementById(button.dataset.target);
-        const originalText = button.textContent;
 
         if (!target) {
           return;
         }
 
+        const originalText = button.textContent.trim();
         const text = target.textContent.trim();
 
-        try {
-          await navigator.clipboard.writeText(text);
-        } catch (error) {
-          const range = document.createRange();
-          const selection = window.getSelection();
+        const copied = await copyToClipboard(text);
 
-          range.selectNodeContents(target);
-          selection.removeAllRanges();
-          selection.addRange(range);
-
-          document.execCommand('copy');
-          selection.removeAllRanges();
+        if (!copied) {
+          return;
         }
 
         button.textContent = 'Copiado!';
@@ -511,38 +880,150 @@
       });
     });
 
-    // Compartilha o site usando a API nativa quando disponível.
+
+    // ============================================================
+    // COMPARTILHAMENTO DO SITE
+    // ============================================================
+
     const shareButton = document.getElementById('share');
+
+    const shareData = {
+      title: 'Protetores Independentes',
+      text: 'Ajude cães e gatos abandonados de Dracena/SP. Conheça a Protetores Independentes e faça parte dessa causa.',
+      url: 'https://protetoresindependentes.ong.br/'
+    };
+
+    function showShareFeedback(text, duration = 2000) {
+      if (!shareButton) {
+        return;
+      }
+
+      const originalText = 'Compartilhar o site';
+
+      shareButton.textContent = text;
+      shareButton.classList.add('ok');
+
+      setTimeout(() => {
+        shareButton.textContent = originalText;
+        shareButton.classList.remove('ok');
+      }, duration);
+    }
+
+    function openShareWindow(url) {
+      window.open(
+        url,
+        '_blank',
+        'noopener,noreferrer,width=700,height=600'
+      );
+    }
+
+    function showShareOptions() {
+      const encodedUrl = encodeURIComponent(shareData.url);
+      const encodedText = encodeURIComponent(
+        `${shareData.text} ${shareData.url}`
+      );
+
+      const options = [
+        {
+          name: 'WhatsApp',
+          url: `https://wa.me/?text=${encodedText}`
+        },
+        {
+          name: 'Telegram',
+          url: `https://t.me/share/url?url=${encodedUrl}&text=${encodeURIComponent(shareData.text)}`
+        },
+        {
+          name: 'Facebook',
+          url: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`
+        },
+        {
+          name: 'X',
+          url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareData.text)}&url=${encodedUrl}`
+        },
+        {
+          name: 'E-mail',
+          url: `mailto:?subject=${encodeURIComponent(shareData.title)}&body=${encodedText}`
+        }
+      ];
+
+      const message = options
+        .map((option, index) => `${index + 1} - ${option.name}`)
+        .join('\n');
+
+      const selected = window.prompt(
+        `Escolha uma opção para compartilhar:\n\n${message}\n\nDigite o número:`
+      );
+
+      if (!selected) {
+        return;
+      }
+
+      const option = options[Number(selected) - 1];
+
+      if (!option) {
+        return;
+      }
+
+      if (option.name === 'E-mail') {
+        window.location.href = option.url;
+        return;
+      }
+
+      openShareWindow(option.url);
+    }
 
     if (shareButton) {
       shareButton.addEventListener('click', async () => {
-        const shareData = {
-          title: document.title,
-          url: window.location.href
-        };
 
+        // 1. Compartilhamento nativo
         if (navigator.share) {
           try {
             await navigator.share(shareData);
+
+            showShareFeedback('Compartilhado!');
+
+            return;
           } catch (error) {
-            // O usuário pode cancelar o compartilhamento.
+            if (error && error.name === 'AbortError') {
+              return;
+            }
           }
+        }
+
+        // 2. Copiar o link
+        const copied = await copyToClipboard(shareData.url);
+
+        if (copied) {
+          showShareFeedback('Link copiado!');
 
           return;
         }
 
-        try {
-          await navigator.clipboard.writeText(shareData.url);
-
-          shareButton.textContent = 'Link copiado!';
-
-          setTimeout(() => {
-            shareButton.textContent = 'Compartilhar o site';
-          }, 1800);
-        } catch (error) {
-          // Clipboard pode não estar disponível em alguns contextos.
-        }
+        // 3. Último fallback
+        showShareOptions();
       });
+    }
+
+
+    // ============================================================
+    // ANIMAÇÃO AO ROLAR
+    // ============================================================
+
+    const reveals = document.querySelectorAll('.reveal');
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      reveals.forEach((element) => observer.observe(element));
+    } else {
+      reveals.forEach((element) => element.classList.add('in'));
     }
   </script>
 

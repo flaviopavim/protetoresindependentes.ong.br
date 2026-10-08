@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://SEU-DOMINIO.com.br/sitemap.xml
+Sitemap: https://protetoresindependentes.ong.br/sitemap.xml
